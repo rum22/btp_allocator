@@ -5,16 +5,19 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.btpallocator.R
+import com.example.btpallocator.database.dao.ProfessorDao
 import com.example.btpallocator.database.dao.StudentDao
-import com.example.btpallocator.database.models.StudentResponseData
+import com.example.btpallocator.database.models.ProfessorRegistrationData
+import com.example.btpallocator.database.models.StudentRegistrationData
 
-@Database(entities = [StudentResponseData::class], version = 1, exportSchema = false)
+@Database(entities = [StudentRegistrationData::class, ProfessorRegistrationData::class], version = 1, exportSchema = false)
 
 //@TypeConverters(ListTypeConverter::class)
 abstract class AppDatabase : RoomDatabase() {
 
     // Dao
     abstract fun studentDao(): StudentDao
+    abstract fun professorDao(): ProfessorDao
 
     companion object {
 

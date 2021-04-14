@@ -4,7 +4,10 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class StudentResponseData(
+data class ProfessorRegistrationData(
     @PrimaryKey
-    val id: String
+    val userId: String,
+    val password: String,
+    val name: String,
+    val emailId: String
 )
