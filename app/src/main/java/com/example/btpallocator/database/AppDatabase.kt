@@ -8,9 +8,14 @@ import com.example.btpallocator.R
 import com.example.btpallocator.database.dao.ProfessorDao
 import com.example.btpallocator.database.dao.StudentDao
 import com.example.btpallocator.database.models.ProfessorRegistrationData
+import com.example.btpallocator.database.models.ProjectData
 import com.example.btpallocator.database.models.StudentRegistrationData
 
-@Database(entities = [StudentRegistrationData::class, ProfessorRegistrationData::class], version = 1, exportSchema = false)
+@Database(
+    entities = [StudentRegistrationData::class, ProfessorRegistrationData::class, ProjectData::class],
+    version = 1,
+    exportSchema = false
+)
 
 //@TypeConverters(ListTypeConverter::class)
 abstract class AppDatabase : RoomDatabase() {
