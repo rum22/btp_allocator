@@ -9,9 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".views.AdminHomeActivity"></activity>
+        <activity android:name=".views.StudentHomeActivity" />
+
         <activity android:name=".views.ProfHomeActivity"></activity>
         <activity android:name=".views.ProfRegisterActivity" />
         <activity android:name=".views.StudentRegisterActivity" />
+
         <activity android:name=".views.ProfLoginActivity" />
         <activity android:name=".views.MainActivity">
             <intent-filter>
