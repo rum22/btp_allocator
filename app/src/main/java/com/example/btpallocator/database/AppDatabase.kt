@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.btpallocator.R
 import com.example.btpallocator.database.dao.ProfessorDao
+import com.example.btpallocator.database.dao.ProjectDao
 import com.example.btpallocator.database.dao.StudentDao
 import com.example.btpallocator.database.models.ProfessorRegistrationData
 import com.example.btpallocator.database.models.ProjectData
@@ -23,6 +24,7 @@ abstract class AppDatabase : RoomDatabase() {
     // Dao
     abstract fun studentDao(): StudentDao
     abstract fun professorDao(): ProfessorDao
+    abstract fun projectDao(): ProjectDao
 
     companion object {
 
