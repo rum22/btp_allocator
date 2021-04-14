@@ -21,21 +21,21 @@
         app:layout_constraintVertical_bias="0.285" />
 
     <Button
-        android:id="@+id/allocated_project"
+        android:id="@+id/btnAllocated_project"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Allocated Project" />
 
     <Button
-        android:id="@+id/view_projects"
+        android:id="@+id/btnView_projects"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="View Projects" />
 
     <Button
-        android:id="@+id/fill_preferences"
+        android:id="@+id/btnFill_preferences"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
