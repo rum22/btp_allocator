@@ -1,9 +1,10 @@
 package com.example.btpallocator.views
 
-import MyViewModelFactory
+import StudentViewModelFactory
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -15,20 +16,18 @@ import kotlinx.android.synthetic.main.activity_student_login.*
 class StudentLoginActivity : AppCompatActivity() {
 
     private lateinit var loginViewModel: StudentViewModel
+    private val viewModelFactory = StudentViewModelFactory(application)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student_login)
         initViews()
     }
 
-    private val viewModelFactory = MyViewModelFactory(application)
-
     private fun initViews() {
         loginViewModel = ViewModelProvider(this, viewModelFactory).get(StudentViewModel::class.java)
         btnLogin.setOnClickListener {
-            if (etPassword.text.toString().isNotBlank() && etUsername.text.toString()
-                    .isNotBlank()
-            ) {
+            if (etPassword.trimmedText().isNotEmpty() && etUsername.trimmedText().isNotEmpty()) {
                 loginViewModel.login(etUsername.text.toString(), etPassword.text.toString())
             }
         }
@@ -47,3 +46,5 @@ class StudentLoginActivity : AppCompatActivity() {
 fun Context.showToast(text: String) {
     Toast.makeText(this, text, Toast.LENGTH_LONG).show()
 }
+
+fun EditText.trimmedText() = this.text.toString().trim()

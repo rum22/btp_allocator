@@ -4,18 +4,18 @@ import android.annotation.SuppressLint
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
 import com.example.btpallocator.database.AppDatabase
-import com.example.btpallocator.database.models.StudentRegistrationData
+import com.example.btpallocator.database.models.ProfessorRegistrationData
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
-class StudentViewModel(application: Application) : BaseViewModel(application) {
-    private val studentDatabase = AppDatabase.getInstance(application).studentDao()
+class ProfessorViewModel(application: Application) : BaseViewModel(application) {
+    private val professorDatabase = AppDatabase.getInstance(application).professorDao()
 
-    val studentLoginSuccess = MutableLiveData<Boolean>()
+    val professorLoginSuccess = MutableLiveData<Boolean>()
 
     @SuppressLint("CheckResult")
     fun login(userName: String, password: String) {
-        studentDatabase.getUserById(userName)
+        professorDatabase.getUserById(userName)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .map {
@@ -24,13 +24,13 @@ class StudentViewModel(application: Application) : BaseViewModel(application) {
                 } ?: false
             }
             .subscribe({
-                studentLoginSuccess.postValue(it)
+                professorLoginSuccess.postValue(it)
             }, {
-                studentLoginSuccess.postValue(false)
+                professorLoginSuccess.postValue(false)
             })
     }
 
-    fun register(studentData: StudentRegistrationData) {
-        studentDatabase.saveNewUser(studentData)
+    fun register(professorData: ProfessorRegistrationData) {
+        professorDatabase.saveNewUser(professorData)
     }
 }
