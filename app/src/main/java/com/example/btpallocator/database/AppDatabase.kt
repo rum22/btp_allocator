@@ -8,7 +8,7 @@ import com.example.btpallocator.R
 import com.example.btpallocator.database.dao.StudentDao
 import com.example.btpallocator.database.models.StudentResponseData
 
-@Database(entities = [StudentResponseData::class], version = 7, exportSchema = false)
+@Database(entities = [StudentResponseData::class], version = 1, exportSchema = false)
 
 //@TypeConverters(ListTypeConverter::class)
 abstract class AppDatabase : RoomDatabase() {
