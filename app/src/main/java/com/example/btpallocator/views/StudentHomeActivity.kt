@@ -18,5 +18,15 @@ class StudentHomeActivity : AppCompatActivity() {
             val studentPrefIntent = Intent(this@StudentHomeActivity, FillPreferenceActivity::class.java)
             startActivity(studentPrefIntent)
         }
+
+        btnAllocated_project.setOnClickListener {
+            val allocatPrjIntent = Intent(this@StudentHomeActivity, StudentAllocatedProjectActivity::class.java)
+            startActivity(allocatPrjIntent)
+        }
+
+        btnView_projects.setOnClickListener {
+            val viewPrjIntent = Intent(this@StudentHomeActivity, StudentViewProjectsActivity::class.java)
+            startActivity(viewPrjIntent)
+        }
     }
 }
