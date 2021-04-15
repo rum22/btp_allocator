@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.ProfAllocatedStudentActivity"></activity>
+        <activity android:name=".views.StudentAllocatedProjectActivity"></activity>
+        <activity android:name=".views.StudentViewProjectsActivity" />
+        <activity android:name=".views.ProfAllocatedStudentActivity" />
         <activity android:name=".views.ProfShowMyProjectActivity" />
         <activity android:name=".views.AdminViewAllocationActivity" />
         <activity android:name=".views.AdminViewStudentActivity" />
