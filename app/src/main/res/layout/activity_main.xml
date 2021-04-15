@@ -105,6 +105,7 @@
             android:id="@+id/btnProfLogin"
             android:layout_width="0dp"
             android:layout_weight="1"
+
             android:layout_height="wrap_content"
             android:text="Login" />
 
@@ -134,7 +135,7 @@
 
         <Button
             android:id="@+id/btnAdminLogin"
-            android:layout_width="169dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:background="#5ae9ff"
