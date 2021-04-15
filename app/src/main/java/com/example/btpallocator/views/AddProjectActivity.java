@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.btpallocator.R;
 
-public class ProfHomeActivity extends AppCompatActivity {
+public class AddProjectActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prof_home);
+        setContentView(R.layout.activity_add_project);
     }
 }
