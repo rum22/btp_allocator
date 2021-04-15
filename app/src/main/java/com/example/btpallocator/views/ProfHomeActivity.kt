@@ -15,8 +15,13 @@ class ProfHomeActivity : AppCompatActivity() {
     }
     private fun initViews() {
         btnAddAProject.setOnClickListener {
-            val studentAddProjIntent = Intent(this@ProfHomeActivity, AddProjectActivity::class.java)
-            startActivity(studentAddProjIntent)
+            val profAddProjIntent = Intent(this@ProfHomeActivity, AddProjectActivity::class.java)
+            startActivity(profAddProjIntent)
+        }
+
+        btnShowMyProjects.setOnClickListener {
+            val profAddProjIntent = Intent(this@ProfHomeActivity, ProfShowMyProjectActivity::class.java)
+            startActivity(profAddProjIntent)
         }
     }
 }
