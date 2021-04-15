@@ -23,5 +23,10 @@ class ProfHomeActivity : AppCompatActivity() {
             val profAddProjIntent = Intent(this@ProfHomeActivity, ProfShowMyProjectActivity::class.java)
             startActivity(profAddProjIntent)
         }
+
+        btnSeeAllocatedStudents.setOnClickListener {
+            val profAllocatedStudIntent = Intent(this@ProfHomeActivity, ProfAllocatedStudentActivity::class.java)
+            startActivity(profAllocatedStudIntent)
+        }
     }
 }
